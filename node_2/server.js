@@ -12,7 +12,7 @@ app.post('/', (req, res)=>{
     firstName: req.body.firstName.toLowerCase(),
     lastName: req.body.lastName.toLowerCase()
   }
-  axios.post('http://localhost:3456', reqLower)
+  axios.post('http://node_3:1234', reqLower)
   .then(response => {
     res.send(response.data)
   })
@@ -21,4 +21,4 @@ app.post('/', (req, res)=>{
   });
 })
 
-app.listen(2345, () => console.log("Listening on port 2345"));
+app.listen(1234, () => console.log("node_2 is listening on port 1234"));
